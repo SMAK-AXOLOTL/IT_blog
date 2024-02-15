@@ -1,0 +1,31 @@
+.Header {
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 0.2% 0.5%;
+    box-sizing: border-box;
+}
+
+span {
+
+}
+.whiteBorder {
+
+}
+.HeaderLeft {
+    width: 30rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.HeaderLeft a{
+    padding: 0 1rem;
+}
+a:hover {
+    cursor: pointer;
+}

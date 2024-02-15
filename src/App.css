@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+.container {
+    display: grid;
+    grid-template-columns: 0.4fr 2fr;
+    grid-template-rows: 0.3fr 0.1fr 1.9fr 0.2fr;
+    grid-auto-flow: column;
+    grid-template-areas:
+    "Ad Ad"
+    "Header Header"
+    "NavBar Content"
+    "NavBar Footer";
+    background-color: #FAEEDD;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.NavBarComponent {
+    grid-area: NavBar;
+    background-color: yellow;
+    position: sticky;
+    top: 6rem;
+    color: #ff0000;
+    height: 50%;
+    width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.FooterComponent {
+    grid-area: Footer;
+    background-color: green;
+    color: #fff;
+    position: sticky;
+    bottom: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ContentComponent {
+    grid-area: Content;
+    background-color: blue;
+    color: #fff;
+    height: 60rem;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.HeaderComponent {
+    grid-area: Header;
+    position: sticky;
+    top: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.AdComponent {
+    grid-area: Ad;
 }
