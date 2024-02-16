@@ -1,13 +1,21 @@
 .Header {
     font-size: 2rem;
-    background-color: black;
-    color: white;
+    background-color: #faeedd;
+    color: #515c5e;
     display: flex;
     justify-content: space-between;
     height: 100%;
     width: 100%;
     padding: 0.2% 0.5%;
     box-sizing: border-box;
+    border: 1px solid #eae0c8;
+}
+.Header a {
+    padding: 0 1rem;
+    text-decoration: none;
+    border: 1px solid #eae0c8;
+    border-radius: 5rem;
+    background-color: #fff6e1;
 }
 
 span {
@@ -24,8 +32,10 @@ span {
 }
 
 .HeaderLeft a{
-    padding: 0 1rem;
+
 }
 a:hover {
     cursor: pointer;
+    border: 1px solid #c6bdaf;
+    color: black;
 }

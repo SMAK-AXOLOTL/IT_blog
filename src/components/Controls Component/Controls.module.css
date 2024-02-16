@@ -1,0 +1,17 @@
+.controls {
+    padding: 0.5em 0.1em;
+    border: 1px solid #eae0c8;
+    background-color: #faeedd;
+    border-top: none;
+}
+
+.controlButtons {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.controlButtons button {
+
+}
