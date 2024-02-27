@@ -1,17 +1,34 @@
 .controls {
-    padding: 0.5em 0.1em;
-    border: 1px solid #eae0c8;
-    background-color: #faeedd;
-    border-top: none;
+    padding: 1% 20%;
+    background-color: #fefff8;
 }
 
 .controlButtons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 100%;
     justify-content: space-between;
     box-sizing: border-box;
+    align-items: center;
 }
 .controlButtons button {
+    border: 1px solid #515c5e;
+    border-radius: 50%;
+    min-width: 40%;
+    height: 6vh;
+}
 
+.controlButtons button:hover {
+    border: 1px solid #515c5e;
+    background-color: #515c5e;
+    color: #faeedd;
+}
+
+.controlsLeft, .controlsRight{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+.controlsRight{
+    justify-content: end;
 }

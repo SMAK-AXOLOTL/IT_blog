@@ -4,7 +4,7 @@
 
 .footer {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     background-color: #c6bdaf;
     color: #252a2b;

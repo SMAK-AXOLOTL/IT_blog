@@ -1,22 +1,24 @@
 .container {
     display: grid;
-    grid-template-columns: 0.3fr 2fr 0.1fr;
-    grid-template-rows: 0.1fr 0.1fr 1.9fr 0.1fr 0.1fr;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: auto 1% auto 1% auto 0.4%;
     grid-auto-flow: column;
     grid-template-areas:
-    "Ad Ad Ad"
-    "Header Header Header"
-    "NavBar Content Controls"
-    ". Comments ."
-    ". Footer .";
-    background-color: #fefff8;
+    "Ad Ad"
+    "Header Header"
+    "NavBar Content"
+    ". Controls"
+    ". Comments"
+    "Footer Footer";
+    background-color: #faeedd;
+    box-sizing: border-box;
 }
 
 .NavBarComponent {
     grid-area: NavBar;
     position: sticky;
-    top: 10.4%;
-    height: 20%;
+    top: 5%;
+    height: 22%;
     width: 100%;
 }
 
@@ -24,12 +26,13 @@
     grid-area: Footer;
     position: sticky;
     bottom: 0;
+    height: 100%;
+    padding: 0.1%;
 }
 
 .ContentComponent {
     grid-area: Content;
-    height: 100%;
-    width: 100%;
+    padding: 20%;
 }
 
 .HeaderComponent {
@@ -38,17 +41,16 @@
     top: 0;
     z-index: 2;
 }
+
 .AdComponent {
     grid-area: Ad;
 }
 
 .ControlsComponent {
     grid-area: Controls;
-    position: sticky;
-    top: 10.4%;
-    height: 10%;
 }
 
 .CommentsComponent {
     grid-area: Comments;
+    height: 97%;
 }

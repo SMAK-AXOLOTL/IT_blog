@@ -4,6 +4,8 @@
     color: #515c5e;
     border: 1px solid #eae0c8;
     border-top: none;
+    border-bottom: none;
+    box-sizing: border-box;
 }
 
 .navButtons{

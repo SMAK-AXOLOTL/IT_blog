@@ -8,6 +8,7 @@ import FooterComponent from "./components/Footer Component/Footer";
 import ControlsComponent from "./components/Controls Component/Controls";
 import CommentsComponent from "./components/Comments Component/Comments";
 
+//TODO: change color scheme to something less awful
 function App() {
     function Scrolldown() {
         window.scroll(0, 102);

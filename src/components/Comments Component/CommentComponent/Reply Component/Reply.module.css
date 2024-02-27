@@ -1,0 +1,50 @@
+.reply {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2% 0;
+    align-items: start;
+    margin: 3% 0;
+}
+.replyContainer {
+    display: flex;
+    flex-direction: column;
+}
+.replyAvaText {
+    display: flex;
+    flex-direction: row;
+    padding: 2% ;
+    align-items: start;
+}
+
+.replyAvaText img {
+    height: 5vh;
+    min-width: 5vh;
+    border-radius: 5vh;
+    object-fit: cover;
+    margin-right: 1vh;
+}
+.authorReplyText {
+    padding: 0;
+}
+.authorReplyText .replyAuthorName {
+    font-weight: bold;
+}
+
+.ratingControl {
+    display: flex;
+    flex-direction: row;
+    padding: 2% 2%;
+    align-items: center;
+}
+
+.ratingControl button {
+    margin: 0.2vh;
+    border: 0.1vh solid black;
+    border-radius: 0.5vh;
+}
+
+.ratingControl button:hover {
+    color: #faeedd;
+    background-color: #c6bdaf;
+}

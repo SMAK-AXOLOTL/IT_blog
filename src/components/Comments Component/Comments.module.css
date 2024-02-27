@@ -1,10 +1,9 @@
 .comments {
-    background-color: #faeedd;
+    background-color: #fefff8;
     display: flex;
     flex-direction: column;
-    padding: 2% 30%;
-    align-items: center;
-
+    padding: 2% 20%;
+    align-items: start;
 }
 
 .authorInfo {
@@ -16,7 +15,7 @@
 .authorPic{
     height: 10vh;
     width: 10vh;
-    border-radius: 7vh;
+    border-radius: 8vh;
     object-fit: cover;
     padding: 1vh 1vh;
 }
@@ -33,13 +32,30 @@
 .yourComment {
     border: 1px solid #c6bdaf;
     border-radius: 3vh;
-    max-width: 100%;
     min-width: 100%;
-    height: 10vh;
+    max-height: 100%;
     box-sizing: border-box;
-    padding: 1vh 0;
+    padding: 2% 0;
     background-color: #fefff8;
+    display: flex;
+    flex-direction: row;
+    align-content: start;
 }
+
+.yourComment button {
+    width: 30%;
+    height: 3vh;
+}
+.isNotActive{
+    opacity: 0;
+    visibility: hidden;
+}
+
+button.isActive {
+    opacity: 1;
+    visibility: visible;
+}
+
 .yourComment img {
     height: 6vh;
     width: 6vh;
@@ -49,10 +65,31 @@
 }
 
 .yourComment textarea {
-    max-height: 100%;
-    max-width: 80%;
+    height: 100%;
+    width: 100%;
     resize: none;
-    max-lines: 300;
     border: none;
     background-color: #fefff8;
+    overflow: hidden;
+    padding: 1%;
+    max-lines: 39;
+}
+
+.yourComment textarea:focus{
+    outline: none;
+}
+
+.textAreaContainer {
+    min-width: 84%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.commentsDisclaimer {
+    padding-left: 30%;
+}
+
+.allComments {
+    min-width: 100%;
 }

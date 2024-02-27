@@ -1,0 +1,56 @@
+.comment {
+    border: .1vh solid #c6bdaf;
+    border-radius: 2vh;
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2% 2%;
+    margin: 3% 0;
+    justify-content: start;
+}
+.commentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.avaText {
+    display: flex;
+    flex-direction: column;
+    padding: 2% ;
+    align-items: start;
+}
+
+.avaText .authorName {
+    font-weight: bold;
+}
+
+img {
+    height: 5vh;
+    min-width: 5vh;
+    border-radius: 5vh;
+    object-fit: cover;
+    margin-right: 1vh;
+}
+.authorCommentText {
+
+}
+
+.ratingControl {
+    display: flex;
+    flex-direction: row;
+    padding: 2% 2%;
+    align-items: center;
+}
+
+.ratingControl button {
+    margin: 0.2vh;
+    border: 0.1vh solid black;
+    border-radius: 0.5vh;
+}
+
+.ratingControl button:hover {
+    color: #faeedd;
+    background-color: #c6bdaf;
+}
