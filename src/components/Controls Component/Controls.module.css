@@ -1,6 +1,6 @@
 .controls {
     padding: 1% 20%;
-    background-color: #fefff8;
+    background-color: var(--content-background);
 }
 
 .controlButtons {
@@ -12,16 +12,20 @@
     align-items: center;
 }
 .controlButtons button {
-    border: 1px solid #515c5e;
-    border-radius: 50%;
-    min-width: 40%;
-    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: 4vh;
+    border: 1px solid var(--button-border);
+    color: var(--text);
+    background-color: var(--button-bg);
+    border-radius: 10vh;
+    min-width: 50%;
+    height: 7vh;
 }
 
 .controlButtons button:hover {
-    border: 1px solid #515c5e;
-    background-color: #515c5e;
-    color: #faeedd;
+    border: 1px solid var(--button-border-hover);
 }
 
 .controlsLeft, .controlsRight{

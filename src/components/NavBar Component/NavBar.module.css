@@ -1,8 +1,6 @@
 .navBar {
-    text-align: center;
-    background-color: #faeedd;
-    color: #515c5e;
-    border: 1px solid #eae0c8;
+    background-color: var(--background);
+    color: var(--text);
     border-top: none;
     border-bottom: none;
     box-sizing: border-box;
@@ -11,14 +9,25 @@
 .navButtons{
     display: flex;
     flex-direction: column;
-}
-.navBar a{
-    padding: 2rem 0 10% 2rem;
-    display: flex;
-    align-content: center;
+    padding-left: 10%;
     justify-content: start;
 }
-.navBar a:hover {
-    background-color: #eae0c8;
+.navBarButton {
+    font-size: 2.5vh;
+    min-height: 5vh;
+    width: 80%;
+    border-radius: 0.5vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
     border: none;
+    box-sizing: border-box;
+}
+.bold {
+    margin-top: 3vh;
+    font-weight: bold;
+}
+.navBarButton:hover {
+    border: none;
+    background-color: var(--button-bg-hover);
 }

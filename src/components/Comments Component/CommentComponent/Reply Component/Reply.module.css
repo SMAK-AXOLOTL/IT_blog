@@ -2,7 +2,7 @@
     min-width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 2% 0;
+    padding: 2% 10%;
     align-items: start;
     margin: 3% 0;
 }
@@ -29,8 +29,15 @@
 }
 .authorReplyText .replyAuthorName {
     font-weight: bold;
+    white-space: pre;
 }
 
+.replyAuthorNameDateTime {
+    display: flex;
+}
+.replyDateTime {
+    white-space: nowrap;
+}
 .ratingControl {
     display: flex;
     flex-direction: row;
@@ -39,12 +46,14 @@
 }
 
 .ratingControl button {
+    color: var(--text);
+    background-color: var(--button-bg);
     margin: 0.2vh;
-    border: 0.1vh solid black;
+    border: 0.1vh solid var(--button-border);
     border-radius: 0.5vh;
 }
 
 .ratingControl button:hover {
-    color: #faeedd;
-    background-color: #c6bdaf;
+    color: var(--text);
+    border: 0.1vh solid var(--button-border-hover);
 }

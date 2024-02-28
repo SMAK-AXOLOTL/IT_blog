@@ -1,7 +1,7 @@
 .Content {
     text-align: center;
-    background-color: #fefff8;
-    color: #515c5e;
+    background-color: var(--content-background);
+    color: var(--text);
     padding: 5% 20% 0;
     box-sizing: border-box;
     font-size: 1rem;

@@ -8,25 +8,24 @@ import FooterComponent from "./components/Footer Component/Footer";
 import ControlsComponent from "./components/Controls Component/Controls";
 import CommentsComponent from "./components/Comments Component/Comments";
 
-//TODO: change color scheme to something less awful
+//TODO: localization
 function App() {
     function Scrolldown() {
-        window.scroll(0, 102);
+        window.scroll(0, 142);
     }
 
     window.onload = Scrolldown;
 
-    return (
-        <div className="container">
-            <AdComponent/>
-            <HeaderComponent/>
-            <NavBarComponent/>
-            <ContentComponent/>
-            <CommentsComponent/>
-            <FooterComponent/>
-            <ControlsComponent/>
-        </div>
-    );
+    return <div className="container">
+        <AdComponent/>
+        <HeaderComponent/>
+        <NavBarComponent/>
+        <ContentComponent/>
+        <CommentsComponent/>
+        <FooterComponent/>
+        <ControlsComponent/>
+    </div>
+
 }
 
 export default App;

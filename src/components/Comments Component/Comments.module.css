@@ -1,5 +1,6 @@
 .comments {
-    background-color: #fefff8;
+    background-color: var(--content-background);
+    color: var(--text);
     display: flex;
     flex-direction: column;
     padding: 2% 20%;
@@ -30,21 +31,28 @@
 }
 
 .yourComment {
-    border: 1px solid #c6bdaf;
+    border: 1px solid var(--button-border-hover);
     border-radius: 3vh;
     min-width: 100%;
     max-height: 100%;
     box-sizing: border-box;
     padding: 2% 0;
-    background-color: #fefff8;
+    background-color: var(--background);
     display: flex;
     flex-direction: row;
     align-content: start;
 }
 
 .yourComment button {
+    color: var(--text);
+    background-color: var(--button-bg);
+    border: 0.1vh solid var(--button-border);
+    border-radius: 1vh;
     width: 30%;
     height: 3vh;
+}
+.yourComment button:hover{
+    border: 0.1vh solid var(--button-border-hover);
 }
 .isNotActive{
     opacity: 0;
@@ -65,11 +73,12 @@ button.isActive {
 }
 
 .yourComment textarea {
+    color: var(--text);
     height: 100%;
     width: 100%;
     resize: none;
     border: none;
-    background-color: #fefff8;
+    background-color: var(--background);
     overflow: hidden;
     padding: 1%;
     max-lines: 39;

@@ -1,3 +1,37 @@
+.light-theme {
+    --button-bg: #f7f7f7;
+    --button-bg-hover: #ffffff;
+    --button-border: #dbdbdb;
+    --button-border-hover: #707070;
+    --background: #f7f7f7;
+    --content-background: #fff;
+    --headings: #000;
+    --text: #38393e;
+}
+
+.dark-theme {
+    --button-bg: #141414;
+    --button-bg-hover: rgb(255 255 255 / 0.16);
+    --button-border: #38393e    ;
+    --button-border-hover: #707070;
+    --background: #141414;
+    --content-background: #222222;
+    --headings: #f9fafa;
+    --text: #a0aec0;
+}
+
+button {
+    color: var(--text);
+    background-color: var(--button-bg);
+    border: 0.1vh solid var(--button-border);
+    border-radius: 10vh;
+}
+
+button:hover {
+    cursor: pointer;
+    border: 0.1vh solid var(--button-border-hover);
+}
+
 .container {
     display: grid;
     grid-template-columns: 15% 85%;
@@ -17,7 +51,7 @@
 .NavBarComponent {
     grid-area: NavBar;
     position: sticky;
-    top: 5%;
+    top: 6%;
     height: 22%;
     width: 100%;
 }

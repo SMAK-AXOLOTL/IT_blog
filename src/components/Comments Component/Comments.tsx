@@ -3,7 +3,7 @@ import styles from "./Comments.module.css"
 import {AllCommentsData, AuthorData} from "../../dataMocks/CommentsData";
 import CommentComponent from "./CommentComponent/Comment";
 
-//TODO: comments date&time, fix right padding
+
 const CommentsComponent: React.FC = () => {
     let textAreaEl: any = null
     let formButton: any = null

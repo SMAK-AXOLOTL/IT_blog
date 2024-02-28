@@ -27,14 +27,10 @@ const ProfileBarComponent: React.FC = () => {
                    {checkUserRating()}
                </div>
                <div className={styles.tooltip} data-tooltip="mentions">
-                   <img className={styles.icon}
-                        src="https://snabbacasinon.net/wp-content/uploads/2021/09/easy-img-150x150.png" alt="mentions"
-                   />
+                   <p className={styles.mentions}>🗪</p>
                </div>
                <div className={styles.tooltip} data-tooltip="settings">
-                    <img className={styles.icon}
-                         src="https://snabbacasinon.net/wp-content/uploads/2021/09/easy-img-150x150.png" alt="settings"
-                    />
+                    <p className={styles.settings}>⚒</p>
                </div>
            </span>
     </div>

@@ -1,5 +1,5 @@
 .comment {
-    border: .1vh solid #c6bdaf;
+    border: .1vh solid var(--button-border-hover);
     border-radius: 2vh;
     min-width: 100%;
     max-width: 100%;
@@ -8,6 +8,7 @@
     padding: 2% 2%;
     margin: 3% 0;
     justify-content: start;
+    box-sizing: border-box;
 }
 .commentContainer {
     display: flex;
@@ -24,6 +25,7 @@
 
 .avaText .authorName {
     font-weight: bold;
+    white-space: pre;
 }
 
 img {
@@ -36,21 +38,36 @@ img {
 .authorCommentText {
 
 }
+.commentAuthorNameDateTime {
+    display: flex;
+}
 
+.commentDateTime {
+    white-space: nowrap;
+}
 .ratingControl {
+    font-size: 2vh;
     display: flex;
     flex-direction: row;
     padding: 2% 2%;
     align-items: center;
 }
-
+.ratingControl .replyButton {
+    font-size: 1.5vh;
+}
 .ratingControl button {
+    display: flex;
+    align-items: center;
+    font-size: 3vh;
+    color: var(--text);
+    background-color: var(--button-bg);
     margin: 0.2vh;
-    border: 0.1vh solid black;
+    height: 60%;
+    border: 0.1vh solid var(--button-border);
     border-radius: 0.5vh;
 }
 
 .ratingControl button:hover {
-    color: #faeedd;
-    background-color: #c6bdaf;
+    color: var(--text);
+    border: 0.1vh solid var(--button-border-hover);
 }

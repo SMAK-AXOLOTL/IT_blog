@@ -12,10 +12,6 @@
 .userName {
     font-weight: bold;
 }
-.userRating{
-
-}
-
 .positive {
     color: lightgreen;
     font-weight: bold;
@@ -33,10 +29,13 @@ img.profilePicture {
     margin-right: 1vh;
 }
 
-img.icon {
-    height: 4vh;
-    object-fit: contain;
+.mentions, .settings {
+    cursor: pointer;
+    font-size: 4vh;
+    color: var(--text);
 }
+
+
 
 .tooltip::after {
     font-size: 1rem;
@@ -45,7 +44,7 @@ img.icon {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     color: #FFF;
     content: attr(data-tooltip);
-    margin: 4rem -4rem;
+    margin: -2rem -1rem;
     opacity: 0;
     padding: 3px 7px;
     position: absolute;
