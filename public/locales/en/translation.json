@@ -1,0 +1,21 @@
+{
+  "social_network": "Social Network",
+  "css_animation": "CSS animation showcase",
+  "theme_toggle": "Change Theme",
+  "karma": "Karma",
+  "mentions_tooltip": "Mentions",
+  "settings_tooltip": "Settings",
+  "created_by": "Created by ",
+  "services": "Services",
+  "calculator": "Calculator",
+  "events": "Events",
+  "podcasts": "Podcasts",
+  "techs": "Technology",
+  "job_search": "Job search",
+  "gossips": "Gossips",
+  "see_all": "See all",
+  "comment_placeholder": "Share your thoughts",
+  "comment_button": "Comment",
+  "comments_moderation": "Comments are moderated. Please, don't break the rules!",
+  "reply_button": "Reply"
+}

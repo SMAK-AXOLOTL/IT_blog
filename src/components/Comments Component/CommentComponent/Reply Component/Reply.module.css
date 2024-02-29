@@ -39,6 +39,7 @@
     white-space: nowrap;
 }
 .ratingControl {
+
     display: flex;
     flex-direction: row;
     padding: 2% 2%;
@@ -46,13 +47,18 @@
 }
 
 .ratingControl button {
+    font-size: 2vh;
+    display: flex;
+    align-items: center;
     color: var(--text);
     background-color: var(--button-bg);
     margin: 0.2vh;
     border: 0.1vh solid var(--button-border);
     border-radius: 0.5vh;
 }
-
+.ratingControl .replyButton {
+    font-size: 1.5vh;
+}
 .ratingControl button:hover {
     color: var(--text);
     border: 0.1vh solid var(--button-border-hover);

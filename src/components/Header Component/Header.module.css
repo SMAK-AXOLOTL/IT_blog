@@ -1,4 +1,4 @@
-.Header {
+.Header{
     font-size: 2vh;
     background-color: var(--background);
     color: var(--text);
@@ -11,6 +11,7 @@
     border: 1px solid var(--button-border);
     align-items: center;
 }
+
 .Header a {
     display: flex;
     align-items: center;
@@ -21,6 +22,7 @@
     border: 0.1vh solid var(--button-border);
     border-radius: 10vh;
 }
+
 .Header a:hover {
     cursor: pointer;
     border: 0.1vh solid var(--button-border-hover);
@@ -30,17 +32,23 @@
     height: 3vh;
     width: 3vh;
 }
+
 .button {
     height: 4vh;
     white-space: nowrap;
     font-size: 2.1vh;
     background-color: var(--button-bg-hover);
  }
+
 .HeaderLeft {
     width: 30rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.HeaderLeft a {
+    margin-right: 2vh;
 }
 
 .HeaderRight {

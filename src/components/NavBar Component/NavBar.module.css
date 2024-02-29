@@ -13,6 +13,7 @@
     justify-content: start;
 }
 .navBarButton {
+    white-space: nowrap;
     font-size: 2.5vh;
     min-height: 5vh;
     width: 80%;

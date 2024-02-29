@@ -1,0 +1,21 @@
+{
+  "social_network": "Социальная сеть",
+  "css_animation": "Демонстрация CSS анимации",
+  "theme_toggle": "Сменить тему",
+  "karma": "Карма",
+  "mentions_tooltip": "Упоминания",
+  "settings_tooltip": "Настройки",
+  "created_by": "Сайт создан ",
+  "services": "Сервисы",
+  "calculator": "Калькулятор",
+  "events": "События",
+  "podcasts": "Подкасты",
+  "techs": "О технологиях",
+  "job_search": "О поиске работы",
+  "gossips": "Слухи",
+  "see_all": "Посмотреть ещё",
+  "comment_placeholder": "Поделитесь своим мнением",
+  "comment_button": "Прокомментировать",
+  "comments_moderation": "Комментарии модерируются. Пожалуйста, не нарушайте правила!",
+  "reply_button": "Ответить"
+}

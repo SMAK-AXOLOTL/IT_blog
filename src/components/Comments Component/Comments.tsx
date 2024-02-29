@@ -1,27 +1,29 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import styles from "./Comments.module.css"
 import {AllCommentsData, AuthorData} from "../../dataMocks/CommentsData";
 import CommentComponent from "./CommentComponent/Comment";
-
+import {useTranslation} from "react-i18next";
 
 const CommentsComponent: React.FC = () => {
-    let textAreaEl: any = null
-    let formButton: any = null
+    const {t} = useTranslation()
+
+    let textAreaEl:any = useRef(null)
+    let formButton:any = useRef(null)
+
+    useEffect(() => {
+        textAreaEl.current = document.getElementById("commentTextArea")
+        formButton.current = document.getElementById("submitButton")
+    }, [])
 
     const AuthorInfo = AuthorData
     const AllComments = AllCommentsData
 
-    useEffect(() => {
-        textAreaEl = document.getElementById('commentTextArea')
-        formButton = document.getElementById('submitButton')
-    }, [])
-
     const textAreaResizeAndCheckValue = () => {
-        textAreaEl.style.height = ''
-        textAreaEl.style.height = textAreaEl.scrollHeight/10 + 'vh'
-        if (textAreaEl.value !== '') {
-            formButton.className = styles.isActive
-        } else formButton.className = styles.isNotActive
+        textAreaEl.current.style.height = ''
+        textAreaEl.current.style.height = textAreaEl.current.scrollHeight / 10 + 'vh'
+        if (textAreaEl.current.value !== '') {
+            formButton.current.className = styles.isActive
+        } else formButton.current.className = styles.isNotActive
     }
 
     return <div className={styles.comments + " CommentsComponent"}>
@@ -39,13 +41,13 @@ const CommentsComponent: React.FC = () => {
                  alt="you"/>
             <div className={styles.textAreaContainer}>
                 <textarea id='commentTextArea' onInput={textAreaResizeAndCheckValue}
-                          placeholder={"Share your thoughts here!"}
+                          placeholder={t("comment_placeholder")}
                           maxLength={5000}/>
-                <button id='submitButton' type={"submit"} className={styles.isNotActive}>Comment</button>
+                <button id='submitButton' type={"submit"} className={styles.isNotActive}>{t("comment_button")}</button>
             </div>
 
         </form>
-        <p className={styles.commentsDisclaimer}>Comments are moderated. Please don't break the rules.</p>
+        <p className={styles.commentsDisclaimer}>{t("comments_moderation")}</p>
         <div className={styles.allComments}>
             {AllComments.map(c =>
                 <CommentComponent comment={c}/>

@@ -17,7 +17,7 @@ export const AllCommentsData: CommentType[] = [
         id: 2,
         authorName: "TetyaMotya",
         commentDateTime: new Date(2024, 1, 28, 16, 37),
-        commentText: "What even is this?! Delete this immediately!!! ",
+        commentText: "Это что такое? Немедленно удалите это! Куда смотрят администраторы?!",
         rating: -5
     },
     {

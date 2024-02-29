@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./ProfileBar.module.css"
+import {useTranslation} from "react-i18next";
 
 const ProfileBarComponent: React.FC = () => {
+    const {t} = useTranslation()
+
     const User = {
         userName: "Ivan Petrov",
         userRating: 5,
@@ -14,7 +17,7 @@ const ProfileBarComponent: React.FC = () => {
         } else if (User.userRating < 0) {
             classDescriptorsArr.push(styles.negative)
         }
-        return <p>Updoots: <span className={classDescriptorsArr.join(' ')}>{User.userRating}</span></p>
+        return <p>{t("karma")}: <span className={classDescriptorsArr.join(' ')}>{User.userRating}</span></p>
     }
 
     return <div className={styles.ProfileBar + " ProfileBarComponent"}>
@@ -26,10 +29,10 @@ const ProfileBarComponent: React.FC = () => {
                    <p className={styles.userName}>{User.userName}</p>
                    {checkUserRating()}
                </div>
-               <div className={styles.tooltip} data-tooltip="mentions">
+               <div className={styles.tooltip} data-tooltip={t("mentions_tooltip")}>
                    <p className={styles.mentions}>🗪</p>
                </div>
-               <div className={styles.tooltip} data-tooltip="settings">
+               <div className={styles.tooltip} data-tooltip={t("settings_tooltip")}>
                     <p className={styles.settings}>⚒</p>
                </div>
            </span>

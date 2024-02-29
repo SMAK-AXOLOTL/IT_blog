@@ -96,7 +96,7 @@ button.isActive {
 }
 
 .commentsDisclaimer {
-    padding-left: 30%;
+    align-self: center;
 }
 
 .allComments {
