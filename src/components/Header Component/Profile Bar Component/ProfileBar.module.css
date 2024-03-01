@@ -35,8 +35,6 @@ img.profilePicture {
     color: var(--text);
 }
 
-
-
 .tooltip::after {
     font-size: 1rem;
     background: rgba(0, 0, 0, 0.8);

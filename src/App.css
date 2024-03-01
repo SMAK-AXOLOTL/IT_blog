@@ -35,24 +35,22 @@ button:hover {
 .container {
     display: grid;
     grid-template-columns: 15% 85%;
-    grid-template-rows: auto 1% auto 1% auto 0.4%;
+    grid-template-rows: 10vh 6vh auto 3vh;
     grid-auto-flow: column;
     grid-template-areas:
     "Ad Ad"
     "Header Header"
     "NavBar Content"
-    ". Controls"
-    ". Comments"
     "Footer Footer";
-    background-color: #faeedd;
+    background-color: var(--background);
     box-sizing: border-box;
 }
 
 .NavBarComponent {
     grid-area: NavBar;
     position: sticky;
-    top: 6%;
-    height: 22%;
+    top: 5%;
+    height: 50vh;
     width: 100%;
 }
 
@@ -86,5 +84,5 @@ button:hover {
 
 .CommentsComponent {
     grid-area: Comments;
-    height: 97%;
+
 }

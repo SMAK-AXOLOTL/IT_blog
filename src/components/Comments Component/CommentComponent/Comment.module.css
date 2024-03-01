@@ -45,6 +45,12 @@ img {
 .commentDateTime {
     white-space: nowrap;
 }
+.commentText {
+
+}
+.crossed {
+    text-decoration: line-through;
+}
 .ratingControl {
     font-size: 2vh;
     display: flex;
@@ -70,4 +76,12 @@ img {
 .ratingControl button:hover {
     color: var(--text);
     border: 0.1vh solid var(--button-border-hover);
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
 }

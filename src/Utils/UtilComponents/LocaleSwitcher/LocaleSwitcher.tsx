@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./LocaleSwitcher.module.css"
 import {useTranslation} from "react-i18next";
-import {supportedLanguages} from "../../i18n/config";
+import {supportedLanguages} from "../../../i18n/config";
 const LocaleSwitcherComponent: React.FC = () => {
     const {i18n} = useTranslation()
 

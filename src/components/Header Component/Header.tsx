@@ -1,16 +1,11 @@
 import React from "react";
 import styles from "./Header.module.css"
 import ProfileBarComponent from "./Profile Bar Component/ProfileBar";
-import useColorTheme from "use-color-theme";
 import logo from "../../logo.svg"
 import {useTranslation} from "react-i18next";
-import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
+
 const HeaderComponent: React.FC = () => {
     const {t} = useTranslation()
-
-    const colorTheme = useColorTheme('light-theme', {
-        classNames: ['light-theme', 'dark-theme']
-    });
 
     return <div className={styles.Header + " HeaderComponent"}>
             <span className={styles.HeaderLeft}>
@@ -21,11 +16,7 @@ const HeaderComponent: React.FC = () => {
             </span>
         <div className={styles.HeaderRight}>
             <ProfileBarComponent/>
-            <button className={styles.themeToggleButton} onClick={colorTheme.toggle}>{t("theme_toggle")}</button>
-            <LocaleSwitcher/>
         </div>
-
-
     </div>
 }
 

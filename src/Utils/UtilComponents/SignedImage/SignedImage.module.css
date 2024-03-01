@@ -1,0 +1,14 @@
+.signedImage {
+    height: 35vh;
+}
+
+.signedImageWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2vh;
+}
+.imageSign {
+    font-style: italic;
+    padding-right: 10%;
+}

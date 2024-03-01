@@ -3,7 +3,7 @@
     color: var(--text);
     display: flex;
     flex-direction: column;
-    padding: 2% 20%;
+    padding: 2% 0;
     align-items: start;
 }
 

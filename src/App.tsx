@@ -5,8 +5,7 @@ import AdComponent from "./components/Ad Component/Ad";
 import NavBarComponent from "./components/NavBar Component/NavBar";
 import ContentComponent from "./components/Content Component/Content";
 import FooterComponent from "./components/Footer Component/Footer";
-import ControlsComponent from "./components/Controls Component/Controls";
-import CommentsComponent from "./components/Comments Component/Comments";
+
 
 function App() {
     function Scrolldown() {
@@ -20,11 +19,10 @@ function App() {
         <HeaderComponent/>
         <NavBarComponent/>
         <ContentComponent/>
-        <CommentsComponent/>
-        <FooterComponent/>
-        <ControlsComponent/>
-    </div>
 
+        <FooterComponent/>
+
+    </div>
 }
 
 export default App;

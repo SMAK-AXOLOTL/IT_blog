@@ -1,10 +1,16 @@
 import React, {useEffect, useRef} from "react";
 import styles from "./Comments.module.css"
-import {AllCommentsData, AuthorData} from "../../dataMocks/CommentsData";
+import {AllCommentsData} from "../../dataMocks/CommentsData";
 import CommentComponent from "./CommentComponent/Comment";
 import {useTranslation} from "react-i18next";
+import {AuthorData} from "../../dataMocks/AuthorData";
 
-const CommentsComponent: React.FC = () => {
+type PropsType = {
+    authorInfo: typeof AuthorData,
+    allComments: typeof AllCommentsData
+}
+
+const CommentsComponent: React.FC<PropsType> = ({authorInfo, allComments}) => {
     const {t} = useTranslation()
 
     let textAreaEl:any = useRef(null)
@@ -15,8 +21,6 @@ const CommentsComponent: React.FC = () => {
         formButton.current = document.getElementById("submitButton")
     }, [])
 
-    const AuthorInfo = AuthorData
-    const AllComments = AllCommentsData
 
     const textAreaResizeAndCheckValue = () => {
         textAreaEl.current.style.height = ''
@@ -29,11 +33,11 @@ const CommentsComponent: React.FC = () => {
     return <div className={styles.comments + " CommentsComponent"}>
         <span className={styles.authorInfo}>
             <img className={styles.authorPic}
-                 src="https://static.printler.com/cache/0/8/1/1/8/c/08118cb095d702b52289a030f9ba1188e345c33b.jpg"
+                 src={authorInfo.authorImg}
                  alt="post author"/>
             <div>
-                <p className={styles.authorName}>{AuthorInfo.authorName}</p>
-                <p className={styles.authorMessage}>{AuthorInfo.engagementBait}</p>
+                <p className={styles.authorName}>{authorInfo.authorName}</p>
+                <p className={styles.authorMessage}>{authorInfo.engagementBait}</p>
             </div>
         </span>
         <form className={styles.yourComment}>
@@ -49,7 +53,7 @@ const CommentsComponent: React.FC = () => {
         </form>
         <p className={styles.commentsDisclaimer}>{t("comments_moderation")}</p>
         <div className={styles.allComments}>
-            {AllComments.map(c =>
+            {allComments.map(c =>
                 <CommentComponent comment={c}/>
             )}
         </div>
