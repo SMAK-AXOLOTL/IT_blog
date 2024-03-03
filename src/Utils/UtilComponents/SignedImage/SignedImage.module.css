@@ -1,5 +1,7 @@
 .signedImage {
-    height: 35vh;
+    object-fit: contain;
+    height: 100%;
+    max-width: 100%;
 }
 
 .signedImageWrapper {

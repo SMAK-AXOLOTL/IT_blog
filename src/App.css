@@ -61,10 +61,9 @@ button:hover {
     height: 100%;
     padding: 0.1%;
 }
-
 .ContentComponent {
     grid-area: Content;
-    padding: 20%;
+    padding: 0 20%;
 }
 
 .HeaderComponent {
@@ -84,5 +83,28 @@ button:hover {
 
 .CommentsComponent {
     grid-area: Comments;
+
+}
+
+@media screen and (max-width: 1270px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1vh 6vh auto 3vh;
+        grid-template:
+        "Ad"
+        "Header"
+        "Content"
+        "Footer";
+    }
+    .NavBarComponent{
+        visibility: hidden;
+    }
+    .ContentComponent {
+        grid-area: Content;
+        padding: 0 0;
+    }
+}
+@media only screen and (max-width : 1000px) {
 
 }

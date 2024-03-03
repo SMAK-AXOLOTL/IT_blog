@@ -9,7 +9,6 @@ export const supportedLanguages = {
 
 i18n.use(LanguageDetector).use(HttpApi).use(initReactI18next).init({
         fallbackLng: "ru",
-        debug: true,
         supportedLngs: Object.keys(supportedLanguages),
         interpolation: {
             escapeValue: false,

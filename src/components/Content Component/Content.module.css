@@ -4,9 +4,9 @@
     color: var(--text);
     box-sizing: border-box;
     width: 90%;
-    padding-top: 0;
-    padding-bottom: 0;
+
 }
+
 .articleAuthorInfo{
     display: flex;
 }

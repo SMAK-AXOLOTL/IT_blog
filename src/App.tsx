@@ -7,6 +7,7 @@ import ContentComponent from "./components/Content Component/Content";
 import FooterComponent from "./components/Footer Component/Footer";
 
 
+//TODO: responsive design
 function App() {
     function Scrolldown() {
         window.scroll(0, 142);

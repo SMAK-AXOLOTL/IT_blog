@@ -1,11 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./ProfileBar.module.css"
 import {useTranslation} from "react-i18next";
 import {UserData} from "../../../dataMocks/UserData";
-import PopUp from "../../PopUp Component/PopUp";
-//TODO: fix settings tooltip position, add settings button flashing
+import ThemeToggler from "../../../Utils/UtilComponents/ThemeToggler/ThemeToggler";
+import LocaleSwitcher from "../../../Utils/UtilComponents/LocaleSwitcher/LocaleSwitcher";
+
 const ProfileBarComponent: React.FC = () => {
     const {t} = useTranslation()
+    const [open, setOpen] = useState(false);
 
     const user = UserData
 
@@ -29,10 +31,20 @@ const ProfileBarComponent: React.FC = () => {
                    {checkUserRating()}
                </div>
                <div className={styles.tooltip} data-tooltip={t("mentions_tooltip")}>
-                   <p className={styles.mentions}>🗪</p>
+                   <button className={styles.mentions}>🗪</button>
                </div>
                <div className={styles.tooltip} data-tooltip={t("settings_tooltip")}>
-                    <PopUp idMessage={"settings"}/>
+                   <button className={[styles.settings, styles.blink_me].join(" ")}  onClick={() => setOpen(!open)}>⚒</button>
+                   {open && (
+                       <div
+                           className={styles.settingsMenu}
+                           id={t('settings_tooltip')}
+                           tabIndex={-1}
+                       >
+                           <ThemeToggler/>
+                           <LocaleSwitcher/>
+                       </div>
+                   )}
                </div>
            </span>
     </div>

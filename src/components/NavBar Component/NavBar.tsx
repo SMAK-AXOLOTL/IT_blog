@@ -9,14 +9,39 @@ const NavBarComponent: React.FC = () => {
     return <div className={styles.navBar + " NavBarComponent"}>
         <div className={styles.navButtons}>
             <h2>{t("services")}</h2>
-            <button className={styles.navBarButton}>☆{t("calculator")}</button>
-            <button className={styles.navBarButton}>☆{t("events")}</button>
+            <button className={styles.navBarButton}>
+                <div className={styles.buttonContentWrapper}>
+                    <span style={{marginRight:'3%'}}>🔢</span>
+                    <span>{t("calculator")}</span>
+                </div>
+            </button>
+            <button className={styles.navBarButton}>
+                <div className={styles.buttonContentWrapper}>
+                    <span style={{marginRight:'3%'}}>📅</span>
+                    <span>{t("events")}</span>
+                </div>
+            </button>
             <div className={styles.divider}/>
             <h2>{t("podcasts")}</h2>
-            <button className={styles.navBarButton}>☆{t("techs")}</button>
-            <button className={styles.navBarButton}>☆{t("job_search")}</button>
-            <button className={styles.navBarButton}>☆{t("gossips")}</button>
-            <button className={styles.navBarButton + ' ' + styles.bold}>{t("see_all")} ➜</button>
+            <button className={styles.navBarButton}>
+                <div className={styles.buttonContentWrapper}>
+                    <span style={{marginRight:'3%'}}>💻</span>
+                    <span>{t("techs")}</span>
+                </div>
+            </button>
+            <button className={styles.navBarButton}>
+                <div className={styles.buttonContentWrapper}>
+                    <span style={{marginRight:'3%'}}>👔</span>
+                    <span>{t("job_search")}</span>
+                </div>
+            </button>
+            <button className={styles.navBarButton}>
+                <div className={styles.buttonContentWrapper}>
+                    <span style={{marginRight:'3%'}}>🤫</span>
+                    <span>{t("gossips")}</span>
+                </div>
+            </button>
+            <button className={[styles.navBarButton,styles.bold].join(' ')}>{t("see_all")} ➜</button>
         </div>
     </div>
 }

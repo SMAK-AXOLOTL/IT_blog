@@ -31,27 +31,55 @@ img.profilePicture {
 
 .mentions, .settings {
     cursor: pointer;
-    font-size: 4vh;
+    font-size: 3vh;
     color: var(--text);
+    border: none;
+}
+.mentions:hover, .settings:hover {
+    border: none;
+}
+
+.blink_me {
+    animation: blinker 3s linear infinite;
+}
+.blink_me:hover {
+    animation-play-state: paused;
+}
+@keyframes blinker {
+    50% {
+        box-shadow: 0 0 1vh 0 var(--text);
+    }
 }
 
 .tooltip::after {
     font-size: 1rem;
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--background);
     border-radius: 8px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-    color: #FFF;
+    box-shadow: 1px 1px 10px var(--button-border-hover);
+    color: var(--text);
     content: attr(data-tooltip);
-    margin: -2rem -1rem;
+    margin: 2.5% -3%;
     opacity: 0;
     padding: 3px 7px;
     position: absolute;
     visibility: hidden;
+    z-index: 2;
 
-    transition: all 0.4s ease-in-out; /* Добавить плавности по вкусу */
+    transition: all 0.4s ease-in-out;
 }
 
 .tooltip:hover::after {
     opacity: 1;
+    visibility: visible;
+}
+.settingsMenu {
+    font-size: 1rem;
+    background: var(--background);
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px var(--button-border-hover);
+    color: #FFF;
+    margin: 2% -5%;
+    padding: 1vh 1vh;
+    position: absolute;
     visibility: visible;
 }

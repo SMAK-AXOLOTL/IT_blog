@@ -27,6 +27,12 @@ text-align: center;
     border: none;
     box-sizing: border-box;
 }
+
+.buttonContentWrapper {
+    align-items: end;
+    display: flex;
+}
+
 .bold {
     margin-top: 3vh;
     font-weight: bold;
