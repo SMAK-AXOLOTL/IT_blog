@@ -1,0 +1,59 @@
+.HeaderLeft {
+    width: 30rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.HeaderLeft > * {
+    margin-right: 1vh;
+}
+
+.button {
+    padding: 0 1vh;
+    height: 4vh;
+    white-space: nowrap;
+    font-size: 2.1vh;
+    background-color: var(--button-bg-hover);
+ }
+
+.HeaderLeft a {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--text);
+    background-color: var(--button-bg-hover);
+    border: 0.1vh solid var(--button-border);
+    border-radius: 10vh;
+    box-sizing: border-box;
+}
+
+.HeaderLeft a:hover {
+    cursor: pointer;
+    border: 0.1vh solid var(--button-border-hover);
+}
+
+.blink_me {
+    animation: blinker 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.blink_me:hover {
+    animation-play-state: paused;
+}
+
+@keyframes blinker {
+    50% {
+        box-shadow: 0 0 3vh 0 var(--text);
+    }
+}
+
+@media screen and (max-width: 1270px){
+    .HeaderLeft .buttonText {
+        font-size: 0;
+    }
+    .blink_me {
+        animation-play-state: running;
+    }
+}

@@ -7,20 +7,20 @@
     flex-direction: row;
     padding: 2% 2%;
     margin: 3% 0;
-    justify-content: start;
-    box-sizing: border-box;
+    justify-content: flex-start;
+    box-sizing: content-box;
 }
 .commentContainer {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .avaText {
     display: flex;
     flex-direction: column;
     padding: 2% ;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .avaText .authorName {
@@ -40,6 +40,7 @@ img {
 }
 .commentAuthorNameDateTime {
     display: flex;
+    flex-flow: wrap;
 }
 
 .commentDateTime {

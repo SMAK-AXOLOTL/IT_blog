@@ -12,7 +12,7 @@
 .dark-theme {
     --button-bg: #141414;
     --button-bg-hover: rgb(255 255 255 / 0.16);
-    --button-border: #38393e    ;
+    --button-border: #38393e;
     --button-border-hover: #707070;
     --background: #141414;
     --content-background: #222222;
@@ -50,7 +50,7 @@ button:hover {
     grid-area: NavBar;
     position: sticky;
     top: 5%;
-    height: 50vh;
+    height: min-content;
     width: 100%;
 }
 
@@ -61,6 +61,7 @@ button:hover {
     height: 100%;
     padding: 0.1%;
 }
+
 .ContentComponent {
     grid-area: Content;
     padding: 0 20%;
@@ -69,7 +70,7 @@ button:hover {
 .HeaderComponent {
     grid-area: Header;
     position: sticky;
-    top: 0;
+    top: -1px;
     z-index: 2;
 }
 
@@ -83,28 +84,25 @@ button:hover {
 
 .CommentsComponent {
     grid-area: Comments;
-
 }
 
-@media screen and (max-width: 1270px){
+@media screen and (max-width: 1270px) {
     .container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1vh 6vh auto 3vh;
-        grid-template:
-        "Ad"
-        "Header"
-        "Content"
-        "Footer";
-    }
-    .NavBarComponent{
-        visibility: hidden;
+        display: flex;
+        flex-flow: column;
     }
     .ContentComponent {
         grid-area: Content;
-        padding: 0 0;
+        padding: 0 5%;
     }
 }
-@media only screen and (max-width : 1000px) {
-
+@media screen and (max-width: 650px){
+    .NavBarComponent {
+        top: 10%
+    }
+}
+@media only screen and (orientation: landscape) {
+    .container {
+        width: 100%;
+    }
 }

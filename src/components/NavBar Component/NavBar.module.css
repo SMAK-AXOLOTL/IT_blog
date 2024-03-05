@@ -1,43 +1,60 @@
 .navBar {
-    background-color: var(--background);
     color: var(--text);
     border-top: none;
     border-bottom: none;
-    box-sizing: border-box;
 }
-.navBar h2 {
-text-align: center;
+.section {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.button {
+    font-size: 2vh;
 }
 
 .navButtons{
+    background-color: var(--background);
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
+    padding-top: 2%;
 }
 .navBarButton {
     padding-left: 10%;
     white-space: nowrap;
-    font-size: 2.5vh;
+    font-size: 2vh;
     min-height: 5vh;
     width: 100%;
     border-radius: 0.5vh;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     border: none;
     box-sizing: border-box;
 }
 
 .buttonContentWrapper {
-    align-items: end;
+    align-items: flex-end;
     display: flex;
 }
 
 .bold {
-    margin-top: 3vh;
     font-weight: bold;
 }
 .navBarButton:hover {
     border: none;
     background-color: var(--button-bg-hover);
+}
+
+@media screen and (max-width: 1270px){
+    .navBarButton {
+        justify-content: center;
+        padding-left: 0;
+    }
+    @media screen and (orientation: landscape){
+        .button {
+            font-size: 2vw;
+        }
+    }
 }

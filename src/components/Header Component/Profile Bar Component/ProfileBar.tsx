@@ -18,7 +18,7 @@ const ProfileBarComponent: React.FC = () => {
         } else if (user.userRating < 0) {
             classDescriptorsArr.push(styles.negative)
         }
-        return <p>{t("karma")}: <span className={classDescriptorsArr.join(' ')}>{user.userRating}</span></p>
+        return <div>{t("karma")}: <span className={classDescriptorsArr.join(' ')}>{user.userRating}</span></div>
     }
 
     return <div className={styles.ProfileBar + " ProfileBarComponent"}>
@@ -27,7 +27,7 @@ const ProfileBarComponent: React.FC = () => {
                     src={user.userProfilePic}
                     alt="profile"/>
                <div className={styles.NameRating}>
-                   <p className={styles.userName}>{user.userName}</p>
+                   <div className={styles.userName}>{user.userName}</div>
                    {checkUserRating()}
                </div>
                <div className={styles.tooltip} data-tooltip={t("mentions_tooltip")}>
@@ -41,6 +41,7 @@ const ProfileBarComponent: React.FC = () => {
                            id={t('settings_tooltip')}
                            tabIndex={-1}
                        >
+                           <div>{t("settings_tooltip")}</div>
                            <ThemeToggler/>
                            <LocaleSwitcher/>
                        </div>

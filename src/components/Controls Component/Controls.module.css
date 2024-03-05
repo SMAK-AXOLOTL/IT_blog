@@ -14,7 +14,7 @@
 .controlButtons button {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     font-size: 4vh;
     border: 1px solid var(--button-border);
     color: var(--text);
@@ -35,5 +35,5 @@
     justify-content: space-between;
 }
 .controlsRight{
-    justify-content: end;
+    justify-content: flex-end;
 }

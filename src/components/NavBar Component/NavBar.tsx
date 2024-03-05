@@ -2,43 +2,42 @@ import React from "react";
 import styles from "./NavBar.module.css"
 import {useTranslation} from "react-i18next";
 
-//TODO: icons
 const NavBarComponent: React.FC = () => {
     const {t} = useTranslation()
 
     return <div className={styles.navBar + " NavBarComponent"}>
         <div className={styles.navButtons}>
-            <h2>{t("services")}</h2>
+            <div className={styles.section}>{t("services")}</div>
             <button className={styles.navBarButton}>
                 <div className={styles.buttonContentWrapper}>
-                    <span style={{marginRight:'3%'}}>🔢</span>
-                    <span>{t("calculator")}</span>
+                    <div className={styles.button} style={{marginRight:'3%'}}>🔢</div>
+                    <div className={styles.button}>{t("calculator")}</div>
                 </div>
             </button>
             <button className={styles.navBarButton}>
                 <div className={styles.buttonContentWrapper}>
-                    <span style={{marginRight:'3%'}}>📅</span>
-                    <span>{t("events")}</span>
+                    <div className={styles.button} style={{marginRight:'3%'}}>📅</div>
+                    <div className={styles.button}>{t("events")}</div>
                 </div>
             </button>
             <div className={styles.divider}/>
-            <h2>{t("podcasts")}</h2>
+            <div className={styles.section}>{t("podcasts")}</div>
             <button className={styles.navBarButton}>
                 <div className={styles.buttonContentWrapper}>
-                    <span style={{marginRight:'3%'}}>💻</span>
-                    <span>{t("techs")}</span>
+                    <div className={styles.button} style={{marginRight:'3%'}}>💻</div>
+                    <div className={styles.button}>{t("techs")}</div>
                 </div>
             </button>
             <button className={styles.navBarButton}>
                 <div className={styles.buttonContentWrapper}>
-                    <span style={{marginRight:'3%'}}>👔</span>
-                    <span>{t("job_search")}</span>
+                    <div className={styles.button} style={{marginRight:'3%'}}>👔</div>
+                    <div className={styles.button}>{t("job_search")}</div>
                 </div>
             </button>
             <button className={styles.navBarButton}>
                 <div className={styles.buttonContentWrapper}>
-                    <span style={{marginRight:'3%'}}>🤫</span>
-                    <span>{t("gossips")}</span>
+                    <div className={styles.button} style={{marginRight:'3%'}}>🤫</div>
+                    <div className={styles.button}>{t("gossips")}</div>
                 </div>
             </button>
             <button className={[styles.navBarButton,styles.bold].join(' ')}>{t("see_all")} ➜</button>

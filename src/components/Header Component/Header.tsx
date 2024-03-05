@@ -1,21 +1,18 @@
-import React from "react";
+import React, {Dispatch} from "react";
 import styles from "./Header.module.css"
 import ProfileBarComponent from "./Profile Bar Component/ProfileBar";
-import {useTranslation} from "react-i18next";
-import axolotl from "../../logo.png"
+import HeaderNavElemsComponent from "./Header Nav Elements Components/HeaderNavElems";
 
-const HeaderComponent: React.FC = () => {
-    const {t} = useTranslation()
+type PropsType = {
+    setOpen: Dispatch<any>,
+    open: boolean
+}
+
+const HeaderComponent: React.FC<PropsType> = ({setOpen,open}) => {
 
     return <div className={styles.Header + " HeaderComponent"}>
-            <span className={styles.HeaderLeft}>
-                <img src={axolotl} alt="blog logo"/>
-                <a href={'https://smak-axolotl.github.io/social-network/#/login'} className={styles.button}>🌐{t("social_network")}</a>
-                <button className={styles.button}>🎬{t("css_animation")}</button>
-            </span>
-        <div className={styles.HeaderRight}>
-            <ProfileBarComponent/>
-        </div>
+        <HeaderNavElemsComponent open={open} setOpen={setOpen}/>
+        <ProfileBarComponent/>
     </div>
 }
 

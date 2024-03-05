@@ -41,15 +41,16 @@ const CommentsComponent: React.FC<PropsType> = ({authorInfo, allComments}) => {
             </div>
         </span>
         <form className={styles.yourComment}>
-            <img src="https://static.printler.com/cache/0/8/1/1/8/c/08118cb095d702b52289a030f9ba1188e345c33b.jpg"
-                 alt="you"/>
+            <div>
+                <img src="https://static.printler.com/cache/0/8/1/1/8/c/08118cb095d702b52289a030f9ba1188e345c33b.jpg"
+                     alt="you"/>
+            </div>
             <div className={styles.textAreaContainer}>
                 <textarea id='commentTextArea' onInput={textAreaResizeAndCheckValue}
                           placeholder={t("comment_placeholder")}
                           maxLength={5000}/>
                 <button id='submitButton' type={"submit"} className={styles.isNotActive}>{t("comment_button")}</button>
             </div>
-
         </form>
         <p className={styles.commentsDisclaimer}>{t("comments_moderation")}</p>
         <div className={styles.allComments}>

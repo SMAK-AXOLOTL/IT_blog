@@ -4,13 +4,13 @@
     display: flex;
     flex-direction: column;
     padding: 2% 0;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .authorInfo {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .authorPic{
@@ -40,7 +40,7 @@
     background-color: var(--background);
     display: flex;
     flex-direction: row;
-    align-content: start;
+    justify-content: flex-start;
 }
 
 .yourComment button {
@@ -81,7 +81,6 @@ button.isActive {
     background-color: var(--background);
     overflow: hidden;
     padding: 1%;
-    max-lines: 39;
 }
 
 .yourComment textarea:focus{
@@ -89,10 +88,12 @@ button.isActive {
 }
 
 .textAreaContainer {
-    min-width: 84%;
+    min-width: 85%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
+    box-sizing: border-box;
 }
 
 .commentsDisclaimer {
@@ -101,4 +102,10 @@ button.isActive {
 
 .allComments {
     min-width: 100%;
+}
+
+@media screen and (max-width: 430px){
+    .textAreaContainer {
+        min-width:75%;
+    }
 }

@@ -1,3 +1,7 @@
+.ProfileBar{
+
+}
+
 .ProfileBarContainer {
     display: flex;
     flex-direction: row;
@@ -6,12 +10,16 @@
 }
 
 .NameRating {
-    font-size: 1.5vh;
+    display: flex;
+    flex-flow: column;
+    justify-items: center;
+    font-size: 2vh;
 }
 
 .userName {
     font-weight: bold;
 }
+
 .positive {
     color: lightgreen;
     font-weight: bold;
@@ -51,35 +59,32 @@ img.profilePicture {
     }
 }
 
-.tooltip::after {
-    font-size: 1rem;
-    background: var(--background);
-    border-radius: 8px;
-    box-shadow: 1px 1px 10px var(--button-border-hover);
-    color: var(--text);
-    content: attr(data-tooltip);
-    margin: 2.5% -3%;
-    opacity: 0;
-    padding: 3px 7px;
-    position: absolute;
-    visibility: hidden;
-    z-index: 2;
-
-    transition: all 0.4s ease-in-out;
-}
-
-.tooltip:hover::after {
-    opacity: 1;
-    visibility: visible;
-}
 .settingsMenu {
-    font-size: 1rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-size: 1.5vh;
     background: var(--background);
     border-radius: 8px;
-    box-shadow: 1px 1px 10px var(--button-border-hover);
-    color: #FFF;
-    margin: 2% -5%;
+    box-shadow: 0.1vh 0.1vh 1vh var(--button-border-hover);
+    color: var(--text);
+    margin: 1% -4.5%;
     padding: 1vh 1vh;
     position: absolute;
-    visibility: visible;
+    box-sizing: border-box;
+}
+.settingsMenu > *:nth-child(3) {
+    width: 100%;
+}
+
+@media screen and (max-width: 650px) and (orientation: portrait){
+    .settingsMenu {
+        margin: 4% -23%;
+    }
+}
+
+@media screen and (max-height: 650px) and (orientation: landscape){
+    .settingsMenu {
+        margin: 1% -10%;
+    }
 }

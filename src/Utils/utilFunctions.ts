@@ -15,7 +15,7 @@ export function formatDate(d: Date) {
     return DD + '.' + MM + '.' + YY + ', ' + hh + ':' + mm
 }
 
-export function paddedString(string: String, padding: number, start?: Boolean) {
-    if (start === true) return " ".repeat(padding) + string
+export function paddedString(string: String, padding: number, line_start?: Boolean) {
+    if (line_start === true) return " ".repeat(padding) + string
     else return string + " ".repeat(padding)
 }
