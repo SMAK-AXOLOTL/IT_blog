@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Reply.module.css"
-import {ReplyType} from "../../../../dataMocks/Types";
+import {ReplyType} from "../../../../Utils/Types";
 import {formatDate, paddedString} from "../../../../Utils/utilFunctions";
 import {useTranslation} from "react-i18next";
 

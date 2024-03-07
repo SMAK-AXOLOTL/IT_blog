@@ -1,7 +1,7 @@
 import React, {Dispatch} from "react";
 import styles from "./HeaderNavElems.module.css"
 import {useTranslation} from "react-i18next";
-import axolotl from "../../../logo.png"
+import axolotl from "../../../logo192.png"
 
 type PropsType = {
     setOpen: Dispatch<any>,

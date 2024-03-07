@@ -1,7 +1,7 @@
 export type CommentType = {
     id: number,
     authorName: string,
-    commentDateTime: Date,
+    commentDateTime: number,
     commentText: string,
     rating: number,
     replies?: ReplyType[]
@@ -10,7 +10,7 @@ export type CommentType = {
 export type ReplyType = {
     id: number,
     replyAuthor: string,
-    replyDateTime: Date,
+    replyDateTime: number,
     replyText: string,
     replyRating: number
 }

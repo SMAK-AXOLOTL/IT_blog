@@ -2,27 +2,29 @@ import React from "react";
 import styles from "./Content.module.css"
 import CommentsComponent from "../Comments Component/Comments";
 import ControlsComponent from "../Controls Component/Controls";
-
-import {PostData} from "../../dataMocks/PostData";
 import {formatDate} from "../../Utils/utilFunctions";
+import {useSelector} from "react-redux";
+import {selectPostInfo} from "../../redux/slices/post/PostSlice";
+import {selectAuthorInfo} from "../../redux/slices/author/AuthorSlice";
 
 const ContentComponent: React.FC = () => {
-    const post = PostData
+    const post = useSelector(selectPostInfo)
+    const author = useSelector(selectAuthorInfo)
 
     return <div className={styles.Content + " ContentComponent"}>
         <div className={styles.ContentPlaceholder}>
             <span>{formatDate(post.postTime)} 👁{post.postViews}</span>
             <span className={styles.articleAuthorInfo}>
-                <img src={post.postAuthor.authorImg} alt={post.postAuthor.authorName}/>
+                <img src={author.authorImg} alt={author.authorName}/>
                 <div>
-                    <div>{post.postAuthor.authorName}</div>
-                    <div>{post.postAuthor.authorStatus}</div>
+                    <div>{author.authorName}</div>
+                    <div>{author.authorStatus}</div>
                 </div>
             </span>
             {post.post}
         </div>
         <ControlsComponent/>
-        <CommentsComponent authorInfo={post.postAuthor} allComments={post.commentsData}/>
+        <CommentsComponent/>
     </div>
 }
 

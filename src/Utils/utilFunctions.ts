@@ -1,8 +1,10 @@
-export function formatDate(d: Date) {
+export function formatDate(timestamp: number) {
+    const d = new Date(timestamp * 1000)
+
     let DD = d.getDate().toString()
     if (DD.length < 2) DD = '0' + DD
 
-    let MM = d.getMonth().toString()
+    let MM = (d.getMonth() + 1).toString()
     if (MM.length < 2) MM = '0' + MM
 
     let YY = d.getFullYear().toString()
